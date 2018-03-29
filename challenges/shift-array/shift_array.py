@@ -1,4 +1,4 @@
-def insertShiftArray(arr, num):
+def insert_shift_array(arr, num):
     answer = [0] * (len(arr) + 1)
     middle = (len(arr) + len(arr) % 2) // 2
 
