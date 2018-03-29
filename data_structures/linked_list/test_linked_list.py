@@ -57,6 +57,6 @@ def test_ll_kth_from_end(filled_linked_list):
 def test_ll_did_not_find_loop(more_filled_linked_list):
     assert more_filled_linked_list.ll_find_loop() is False
 
-def test_ll_find_loop(more_filled_linked_list):
-    more_filled_linked_list.head.next.next.next = more_filled_linked_list.head
-    assert more_filled_linked_list.ll_find_loop() is True
+def test_ll_find_loop(filled_linked_list):
+    filled_linked_list.head.next.next.next = filled_linked_list.head
+    assert filled_linked_list.ll_find_loop() is True
