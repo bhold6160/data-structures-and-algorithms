@@ -3,7 +3,7 @@ from .node import Node
 
 class LinkedList:
 
-    def __init__(self, iter=[]): #Initializing the head 
+    def __init__(self, iter=[]): 
         self.head = None
         self._len = 0
 
@@ -42,20 +42,21 @@ class LinkedList:
 
     def insert_before(self, value, new_value):
         current = self.head
-        while current.next != value:
+        while current.next.data != value:
             current = current.next
         current.next = Node(new_value, current.next)
 
     def insert_after(self, value, new_value):
         current = self.head
-        while current != value:
-            current.next = Node(new_value, current.next)
+        while current.data != value:
+            current = current.next
+        current.next = Node(new_value, current.next)
 
     def ll_kth_from_end(self, value):
         current = self.head
         if len(self) - 1 < value or value < 0:
             return False
         else:
-            for _ in range(value - 1):
+            for _ in range(len(self) - value - 1):
                 current = current.next
         return current
