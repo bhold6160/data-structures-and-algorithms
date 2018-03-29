@@ -1,4 +1,4 @@
-from node import Node
+from .node import Node
 
 
 class LinkedList:
@@ -7,13 +7,9 @@ class LinkedList:
         self.head = None
         self._len = 0
 
-        for item in iter:
+        for item in reversed(iter):
             self.head = Node(item, self.head)
             self._len += 1
-
-    # def __repr__(self):
-    #     # Assuming head will have a val (You need to handle the case of None)
-    #     return '<head> => {}'.format(self.head.value)
 
     def __len__(self):
         return self._len
@@ -21,9 +17,9 @@ class LinkedList:
     def __str__(self):
         my_list = []
         current = self.head
-        for _ in range(self._len+1):
+        while current:
             my_list.append(current)
-            current = current._next
+            current = current.next
         return str(my_list)
 
     def insert(self, value):

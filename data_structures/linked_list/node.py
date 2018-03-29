@@ -4,5 +4,5 @@ class Node:
         self.data = data
         self.next = next
 
-    def __str__(self):
-        return self.data
+    def __repr__(self):
+        return str(self.data)
