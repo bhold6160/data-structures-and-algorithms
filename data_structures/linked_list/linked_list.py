@@ -60,3 +60,22 @@ class LinkedList:
             for _ in range(len(self) - value - 1):
                 current = current.next
         return current
+
+    def ll_find_loop(self):
+        a = b = self.head
+        while a and b and b.next:
+            a = a.next
+            b = b.next.next
+            if a is b:
+                return True
+        return False
+        
+    # def ll_find_loop(self):
+    #     counter = 0
+    #     current = self.head
+    #     while current:
+    #         current = current.next
+    #         counter += 1
+    #         if counter > len(self):
+    #             return True
+    #     return False

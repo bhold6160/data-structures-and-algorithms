@@ -53,3 +53,10 @@ def test_merge_lists(filled_linked_list, more_filled_linked_list):
 def test_ll_kth_from_end(filled_linked_list):
     node_value = filled_linked_list.ll_kth_from_end(1)
     assert node_value.data == 2
+
+def test_ll_did_not_find_loop(more_filled_linked_list):
+    assert more_filled_linked_list.ll_find_loop() is False
+
+def test_ll_find_loop(more_filled_linked_list):
+    more_filled_linked_list.head.next.next.next = more_filled_linked_list.head
+    assert more_filled_linked_list.ll_find_loop() is True
