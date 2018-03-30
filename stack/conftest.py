@@ -21,8 +21,6 @@ def small_stack():
 @pytest.fixture
 def large_stack():
     s = Stack()
-
     for num in range(1000):
         s.push(num)
-
     return s
