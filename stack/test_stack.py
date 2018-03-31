@@ -24,14 +24,14 @@ def test_top_value(small_stack):
     assert small_stack.top._next.value == 4
 
 def test_pop(small_stack):
-    assert small_stack.pop().value == 5
+    assert small_stack.pop() == 5
     assert small_stack.top.value == 4
     assert small_stack._size == 4
 
 
 def test_single_pop(empty_stack):
     empty_stack.push(1)
-    assert empty_stack.pop().value == 1
+    assert empty_stack.pop() == 1
     assert empty_stack._size == 0
 
 def test_peek(small_stack):

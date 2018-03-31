@@ -29,7 +29,7 @@ class Stack:
         remove_node = self.top
         self.top = self.top._next
         self._size -= 1
-        return remove_node
+        return remove_node.value
 
     def peek(self):
         assert self.top.value
