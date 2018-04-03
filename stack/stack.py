@@ -6,8 +6,6 @@ class Stack:
         self.top = None
         self._size = 0
 
-    # We would also define out magics for more info
-
     def __repr__(self):
         return f'Top stack is  {self.top.value}'
 
