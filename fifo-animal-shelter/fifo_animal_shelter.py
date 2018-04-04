@@ -15,7 +15,7 @@ class Animal:
         current = self.front
         adopted_animal = None
         if user_input == None or user_input == self.back.value:
-            return self.front.next
+            return current
         while current.next is not None:
             if current.next.value == animal:
                 adopted_animal = current.next
