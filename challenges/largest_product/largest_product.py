@@ -1,11 +1,9 @@
-counter = 0
-answer = 0
+def largest_product(new_list):
+    counter = 0
+    answer = 0
+    new_list = []
 
-new_list = []
-start_list = [[1, 2], [3, 4], [5, 6], [7, 8]]
-
-def largest_product():
-    for item in start_list:
+    for item in new_list:
         new_list[counter] = item[0] * item[1]
     for answer in new_list:
         if answer < item:

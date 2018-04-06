@@ -1,0 +1,5 @@
+{
+  "test_towers_of_hanoi.py::test_even": true,
+  "test_towers_of_hanoi.py::test_huge": true,
+  "test_towers_of_hanoi.py::test_odd": true
+}

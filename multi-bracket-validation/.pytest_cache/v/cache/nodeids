@@ -1,0 +1,8 @@
+[
+  "test_multi_bracket_validation.py::test_multi_bracket_validation_true",
+  "test_multi_bracket_validation.py::test_multi_bracket_validation_false",
+  "test_multi_bracket_validation.py::test_singlechar_bracket_validation",
+  "test_multi_bracket_validation.py::test_char_bracket_validation",
+  "test_multi_bracket_validation.py::test_multichar_bracket_validation_true",
+  "test_multi_bracket_validation.py::test_multichar_bracket_validation_false"
+]
