@@ -1,0 +1,6 @@
+[
+  "test_towers_of_hanoi.py::test_towers_of_hanoi_two",
+  "test_towers_of_hanoi.py::test_towers_of_hanoi_three",
+  "test_towers_of_hanoi.py::test_towers_of_hanoi_seven",
+  "test_towers_of_hanoi.py::test_towers_of_hanoi_ten"
+]
