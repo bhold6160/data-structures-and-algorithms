@@ -19,6 +19,12 @@ def test_singlechar_bracket_validation():
     """
     assert mbv('}') == False
 
+def test_char_bracket_validation():
+    """
+    Tests a single character string for False validation
+    """
+    assert mbv('}{') == False
+
 def test_multichar_bracket_validation_true():
     """
     Tests multi char string for True validation
