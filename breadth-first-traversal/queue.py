@@ -1,6 +1,7 @@
-from breadth_first_traversal import BFT
-from breadth_first_traversal import Node
-
+class Node:
+    def __init__(self, val, next=None):
+        self.val = val
+        self._next = next
 
 class Queue:
 
@@ -16,9 +17,9 @@ class Queue:
     def __len__(self):
         return self._size
 
-    def enqueue(self, value):
+    def enqueue(self, val):
         try:
-            node = Node(value)
+            node = Node(val)
         except TypeError:
             return self.back
         self._size += 1
@@ -33,4 +34,4 @@ class Queue:
         dequeued_node = self.front
         self.front = self.front._next
         self._size -= 1
-        return dequeued_node.value
+        return dequeued_node.val

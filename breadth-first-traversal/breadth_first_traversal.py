@@ -7,7 +7,7 @@ class Node:
     self.right = right
 
 
-class BFT:
+class BST:
     def __init__(self, iter=[]):
         self.root = None
         if type(iter) is not list:
