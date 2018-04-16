@@ -1,0 +1,19 @@
+[
+  "test_fifo_animal_shelter.py::test_empty_shelter",
+  "test_fifo_animal_shelter.py::test_make_invalid_queue",
+  "test_fifo_animal_shelter.py::test_instantiate_with_iterable",
+  "test_fifo_animal_shelter.py::test_enqueue",
+  "test_fifo_animal_shelter.py::test_enqueue_invalid",
+  "test_fifo_animal_shelter.py::test_enqueue_invalid_animal",
+  "test_fifo_animal_shelter.py::test_enqueue_twice",
+  "test_fifo_animal_shelter.py::test_dequeue_none",
+  "test_fifo_animal_shelter.py::test_dequeue_invalid",
+  "test_fifo_animal_shelter.py::test_dequeue_dog",
+  "test_fifo_animal_shelter.py::test_dequeue_cat",
+  "test_fifo_animal_shelter.py::test_dequeue_cat_vals",
+  "test_fifo_animal_shelter.py::test_dequeue_cat_ddc",
+  "test_fifo_animal_shelter.py::test_dequeue_cat_ddc_vals",
+  "test_fifo_animal_shelter.py::test_dequeue_dog_ddc",
+  "test_fifo_animal_shelter.py::test_dequeue_invalid_animal",
+  "test_fifo_animal_shelter.py::test_dequeue_not_dog_or_cat"
+]
