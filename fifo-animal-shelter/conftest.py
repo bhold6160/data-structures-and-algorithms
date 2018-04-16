@@ -11,7 +11,7 @@ def empty_queue():
 
 
 @pytest.fixture
-def short_queue():
+def dcdc_queue():
     """
     create a short queue
     """

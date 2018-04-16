@@ -36,20 +36,20 @@ def test_enqueue(empty_queue):
     assert empty_queue._size == 1
 
 
-def test_enqueue_invalid(short_queue):
+def test_enqueue_invalid(dcdc_queue):
     """
     Test enqueue nothing
     """
     with pytest.raises(ValueError):
-        short_queue.enqueue(None)
+        dcdc_queue.enqueue(None)
 
 
-def test_enqueue_invalid_animal(short_queue):
+def test_enqueue_invalid_animal(dcdc_queue):
     """
     Test enqueue not dog or cat
     """
     with pytest.raises(ValueError):
-        short_queue.enqueue('dat')
+        dcdc_queue.enqueue('dat')
 
 
 def test_enqueue_twice(empty_queue):
@@ -62,12 +62,12 @@ def test_enqueue_twice(empty_queue):
     assert empty_queue.front.val == 'dog'
 
 
-def test_dequeue_none(short_queue):
+def test_dequeue_none(dcdc_queue):
     """
     Test dequeue no pref
     """
-    assert short_queue.dequeue() == 'dog'
-    assert short_queue.front.val == 'cat'
+    assert dcdc_queue.dequeue() == 'dog'
+    assert dcdc_queue.front.val == 'cat'
 
 
 def test_dequeue_invalid(empty_queue):
@@ -79,31 +79,31 @@ def test_dequeue_invalid(empty_queue):
     assert str(err.value) == 'No animals'
 
 
-def test_dequeue_dog(short_queue):
+def test_dequeue_dog(dcdc_queue):
     """
     Test dequeue front
     """
-    assert short_queue.dequeue('dog') == 'dog'
-    assert short_queue.front.val == 'cat'
-    assert short_queue._size == 3
+    assert dcdc_queue.dequeue('dog') == 'dog'
+    assert dcdc_queue.front.val == 'cat'
+    assert dcdc_queue._size == 3
 
 
-def test_dequeue_cat(short_queue):
+def test_dequeue_cat(dcdc_queue):
     """
     Test dequeue not front
     """
-    assert short_queue.dequeue('cat') == 'cat'
-    assert short_queue._size == 3
-    assert short_queue.front.val == 'dog'
+    assert dcdc_queue.dequeue('cat') == 'cat'
+    assert dcdc_queue._size == 3
+    assert dcdc_queue.front.val == 'dog'
 
 
-def test_dequeue_cat_vals(short_queue):
+def test_dequeue_cat_vals(dcdc_queue):
     """
     Test dequeue not front
     """
-    short_queue.dequeue('cat')
-    assert short_queue.front._next.val == 'dog'
-    assert short_queue.front._next._next.val == 'cat'
+    dcdc_queue.dequeue('cat')
+    assert dcdc_queue.front._next.val == 'dog'
+    assert dcdc_queue.front._next._next.val == 'cat'
 
 
 def test_dequeue_cat_ddc(ddc_queue):
