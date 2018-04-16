@@ -17,7 +17,7 @@ class Node:
         return '{val}'.format(val=self.val)
 
 
-class Animal:
+class Animal_Shelter:
     def __init__(self, iter=[]):
         """
         Constructor for Queue

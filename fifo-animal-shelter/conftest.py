@@ -1,5 +1,5 @@
 import pytest
-from fifo_animal_shelter import Animal as animal
+from fifo_animal_shelter import Animal_Shelter as animal
 
 
 @pytest.fixture
