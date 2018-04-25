@@ -5,5 +5,6 @@
   "test_k_tree.py::test_left_heavy": true,
   "test_k_tree.py::test_post_order": true,
   "test_k_tree.py::test_pre_order": true,
-  "test_k_tree.py::test_right_heavy": true
+  "test_k_tree.py::test_right_heavy": true,
+  "test_k_tree.py::test_single_insert": true
 }
