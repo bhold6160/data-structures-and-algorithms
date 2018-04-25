@@ -1,4 +1,4 @@
-from .k_tree import KTree as kt
+from k_tree import KTree as kt
 import pytest
 
 
@@ -48,18 +48,6 @@ def test_in_order():
     c = []
     k.in_order(lambda n: c.append(n.val))
     assert c == [1, 2, 3]
-
-
-def test_left_heavy(left_heavy_tree):
-    assert left_heavy_tree.root.val == 5
-    assert left_heavy_tree.root.left.val == 4
-    assert left_heavy_tree.root.left.left.val == 3
-
-
-def test_right_heavy(right_heavy_tree):
-    assert right_heavy_tree.root.val == 1
-    assert right_heavy_tree.root.right.val == 2
-    assert right_heavy_tree.root.right.right.val == 3
 
 
 def test_balanced_tree(balanced_tree):

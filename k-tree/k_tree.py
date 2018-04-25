@@ -2,70 +2,54 @@ from node import Node
 
 
 class KTree:
-    def __init__(self, iter=[]):
+    def __init__(self):
+        """Initializes Ktree class"""
         self.root = None
-        if type(iter) is not list:
-            raise TypeError
-        for item in iter:
-            self.insert(item)
+        self._size = 0
 
     def __repr__(self):
+        """Represents tree root"""
         return '<KTree Root {}>'.format(self.root.val)
 
     def __str__(self):
+        """String of root value"""
         return self.root.val
 
     def pre_order(self, operation):
+        """Pre-order traversal"""
         def _walk(node=None):
             if node is None:
                 return
 
             operation(node)
 
-            if node.left is not None:
-                _walk(node.left)
-
-            if node.right is not None:
-                _walk(node.right)
+            for children in node.children:
+                _walk(children)
 
         _walk(self.root)
 
     def post_order(self, operation):
+        """Post-order traversal"""
         def _walk(node=None):
             if node is None:
                 return
 
-            if node.left is not None:
-                _walk(node.left)
-
-            if node.right is not None:
-                _walk(node.right)
+            for children in node.children:
+                _walk(children)
 
             operation(node)
 
         _walk(self.root)
 
-    def insert(self, val):
-        node = Node(val)
-        current = self.root
+    def insert(self, parent, val):
+        """Insert value into tree at parent"""
+        if not self.root:
+            self.root = Node(val)
+            self._size += 1
+        else:
+            def insert(node):
+                if node.val == parent:
+                    node.insert(val)
+                    self._size += 1
+            self._breadth_first(insert)
 
-        if self.root is None:
-            self.root = node
-            return node
-
-        while current:
-            if val >= current.val:
-                if current.right is not None:
-                    current = current.right
-                else:
-                    current.right = node
-                    break
-
-            elif val < current.val:
-                if current.left is not None:
-                    current = current.left
-                else:
-                    current.left = node
-                    break
-
-        return node
