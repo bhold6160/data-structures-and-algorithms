@@ -1,8 +1,4 @@
 [
   "test_k_tree.py::test_single_insert",
-  "test_k_tree.py::test_created_with_iter",
-  "test_k_tree.py::test_in_order",
-  "test_k_tree.py::test_balanced_tree",
-  "test_k_tree.py::test_pre_order",
-  "test_k_tree.py::test_post_order"
+  "test_k_tree.py::test_insert_in_filled_tree"
 ]

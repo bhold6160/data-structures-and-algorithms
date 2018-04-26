@@ -1,4 +1,5 @@
 from node import Node
+from queue import Queue
 
 
 class KTree:
@@ -42,7 +43,7 @@ class KTree:
         _walk(self.root)
 
     def insert(self, parent, val):
-        """Insert value into tree at parents"""
+        """Insert value into tree at parent"""
         if not self.root:
             self.root = Node(val)
             self._size += 1
@@ -51,19 +52,19 @@ class KTree:
                 if node.val == parent:
                     node.insert(val)
                     self._size += 1
-            self._breadth_first(insert)
+            self.breadth_first_traversal()
 
-    def breadth_first_traversal(self, operation):
-        """
-        A breadth first traversal appending each node from the parent and
-        traverses each level until the end performing an operation on each node
-        """
-        def recurse(nodelist):
-            new_list = []
-            for node in nodelist:
-                operation(node)
-                [new_list.append(child) for child in node.children]
-            if len(new_list):
-                recurse(new_list)
-            if self.root:
-                recurse([self.root])
+    def breadth_first_traversal(self):
+        """return breadth-first-traversal of a binary tree"""
+        queue = Queue()
+        traverse = []
+
+        if not self.root:
+            return
+        queue.enqueue(self.root)
+        while len(queue) > 0:
+            current = queue.dequeue()
+            traverse.append(current.val)
+            if current.child:
+                queue.enqueue(current.child)
+        return traverse

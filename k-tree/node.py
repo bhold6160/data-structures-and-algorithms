@@ -3,6 +3,7 @@ class Node:
     def __init__(self, val):
         """Initializes node"""
         self.val = val
+        self.child = None
         self.children = []
 
     def __repr__(self):
