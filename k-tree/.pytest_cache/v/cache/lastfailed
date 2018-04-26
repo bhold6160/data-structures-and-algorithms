@@ -2,6 +2,7 @@
   "test_k_tree.py::test_balanced_tree": true,
   "test_k_tree.py::test_created_with_iter": true,
   "test_k_tree.py::test_in_order": true,
+  "test_k_tree.py::test_insert_in_filled_tree": true,
   "test_k_tree.py::test_left_heavy": true,
   "test_k_tree.py::test_post_order": true,
   "test_k_tree.py::test_pre_order": true,
