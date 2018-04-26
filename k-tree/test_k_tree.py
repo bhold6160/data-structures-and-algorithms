@@ -8,5 +8,6 @@ def test_single_insert(empty_tree):
 
 
 def test_insert_in_filled_tree(filled_tree):
+    """test insertion into filled tree"""
     filled_tree.insert(1, 17)
     assert filled_tree.root.val == 1

@@ -4,6 +4,7 @@ from node import Node
 class Queue:
 
     def __init__(self, iter=[]):
+        """Initializes Queue"""
         self.front = None
         self.back = None
         self._size = 0
@@ -13,9 +14,11 @@ class Queue:
             self.enqueue(item)
 
     def __len__(self):
+        """Returns lenght of queue"""
         return self._size
 
     def enqueue(self, val):
+        """Enqueue node from the back"""
         try:
             node = Node(val)
         except TypeError:
@@ -29,6 +32,7 @@ class Queue:
         return self.front
 
     def dequeue(self):
+        """Dequeue node from front"""
         dequeued_node = self.front
         self.front = self.front._next
         self._size -= 1
