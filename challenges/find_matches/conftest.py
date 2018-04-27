@@ -1,4 +1,10 @@
+from .k_tree import KTree as kt
 import pytest
+
+
+@pytest.fixture
+def empty_tree():
+    return kt()
 
 
 @pytest.fixture

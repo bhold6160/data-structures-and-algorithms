@@ -1,5 +1,3 @@
-from k_tree import KTree as kt
-from find_matches import find_matches
 import pytest
 
 

@@ -1,6 +1,6 @@
-from node import Node
-from queue import Queue
-from k_tree import KTree
+from .node import Node
+from .queue import Queue
+from .k_tree import KTree
 
 
 def find_matches(tree, k):
