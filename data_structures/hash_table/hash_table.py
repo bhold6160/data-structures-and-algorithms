@@ -2,7 +2,9 @@ from linked_list import LinkedList
 
 
 class HashTable:
-    """Initializes max size has table can be and creates a linked list for each bucket"""
+    """
+    Initialize max size of hash table and creates a linked list for each bucket
+    """
     def __init__(self, max_size=1024):
         self.max_size = max_size
         self.buckets = [LinkedList() for _ in range(self.max_size)]
@@ -28,18 +30,8 @@ class HashTable:
         return sum % len(self.buckets)
 
     def set(self, key, val):
-        # hash the key; get a location for the bucket to insert into
-        # set val into bucket
-
-        # You will handle collissions here...
-        # Your values may look something like a DB record:
-            # {
-            #     'id': '123',
-            #     'name':'xxx',
-            #     'title': 'zzz',
-            # }
-
-        self.buckets[self.hash_key(key)].insert((key, val))
+        """hashes the key to get a location for the bucket to insert into"""
+        return self.buckets[self.hash_key].insert({key: val})
 
     def get(self, key):
         """Retrieves given key from bucket"""

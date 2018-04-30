@@ -33,4 +33,3 @@ class LinkedList:
                 return True
             current = current.next
         return False
-
