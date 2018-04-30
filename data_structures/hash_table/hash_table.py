@@ -2,11 +2,17 @@ from linked_list import LinkedList
 
 
 class HashTable:
+    """Initializes max size has table can be and creates a linked list for each bucket"""
     def __init__(self, max_size=1024):
         self.max_size = max_size
         self.buckets = [LinkedList() for _ in range(self.max_size)]
 
     def hash_key(self, key):
+        """
+        Converts each character to ascii value and then returns
+        remainder after dividing number of buckets by sum and returning
+        the location of which bucket will store the value
+        """
         if type(key) is not str:
             raise TypeError
 
@@ -36,6 +42,7 @@ class HashTable:
         self.buckets[self.hash_key(key)].insert((key, val))
 
     def get(self, key):
+        """Retrieves given key from bucket"""
         bucket = self.buckets[self.hash_key(key)]
         current = bucket.head
         while current:
@@ -45,6 +52,7 @@ class HashTable:
         raise KeyError('Does not exist')
 
     def remove(self, key):
+        """Removes given key from bucket"""
         temp = self.buckets[self.hash_key(key)]
         self.buckets[self.hash_key(key)] = None
         return temp
