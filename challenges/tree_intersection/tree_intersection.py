@@ -1,14 +1,16 @@
-from node import Node, BST
-from sets import Set
+from bst import Node, BST
 
 
 def tree_intersection(tree_one, tree_two):
-    empty_list = []
-    set_one = Set([tree_one])
-    set_two = Set([tree_two])
+    empty_set = set()
+    set_one = set()
+    set_two = set()
 
-    for i in set_one:
-        for j in set_two:
-            if j == set_one[i]:
-                empty_list.append(j)
-    return empty_list
+    traversed_one = tree_one.pre_order(set_one.add(tree_one.val))
+    traversed_two = tree_two.pre_order(set_two.add(tree_one.val))
+
+    for i in traversed_one:
+        for j in traversed_two:
+            if j == traversed_one[i]:
+                empty_set.add(j)
+    return empty_set
