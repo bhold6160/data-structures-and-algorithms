@@ -18,12 +18,6 @@ class HashTable:
         if type(key) is not str:
             raise TypeError
 
-        # iterate through key, and convert each char to ascii char code
-        # sum all char codes for a total int value
-        # return => mod total by number of buckets
-
-        # return reduce(lambda a, b: a + ord(b), list(key), 0) % self.buckets
-
         sum = 0
         for char in key:
             sum += ord(char)
@@ -47,4 +41,8 @@ class HashTable:
         """Removes given key from bucket"""
         temp = self.buckets[self.hash_key(key)]
         self.buckets[self.hash_key(key)] = None
-        return temp
+        current = temp.head
+        while current:
+            removed, current = current.val, current._next
+            temp.head = current
+            return removed

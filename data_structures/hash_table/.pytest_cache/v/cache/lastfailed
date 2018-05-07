@@ -1,0 +1,8 @@
+{
+  "test_hash_table.py": true,
+  "test_hash_table.py::test_hash_table_get": true,
+  "test_hash_table.py::test_hash_table_set": true,
+  "test_hash_table.py::test_set_empty": true,
+  "test_hash_table.py::test_set_fail": true,
+  "test_hash_table.py::test_set_into_existing": true
+}
