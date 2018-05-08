@@ -2,6 +2,7 @@ def selection_sort(lst):
     """
     Selection sort algorithm
     """
+    lst = list(lst)
     for i in range(len(lst) - 1):
         min_index = i
         min_val = lst[i]
